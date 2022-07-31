@@ -1,0 +1,21 @@
+the repo include all the neccessary files
+1.Hotelreservation.jav -> main file
+2.Db.java -> to connect to postgresql
+3.consoleApp.c -> native app
+4.hotel.dll -> generated dynamic library
+5.postgresql driver file
+6.HotelReservation.h -> header file generated for native jni
+
+can be run through java -cp "postgresdriver path;main path" HotelReservation
+
+if any modication the following steps are to be followed:
+
+  javac -h . ./Hotelreservation(if any change in main method and native call)
+
+  javac -cp "postgres driver path" : ./Db.java
+
+  g++ -c -I"C:\Program Files\Java\jdk-18.0.2\include" -I"C:\Program Files\Java\jdk-18.0.2\include\win32" consoleApp.c -o consoleApp.o to compile native code
+
+  gcc -shared -o hotel.dll consoleApp.o -Wl,--add-stdcall-alias //to create dll file
+
+  java -cp "C:\Users\Maran\Desktop\hari\hotelreservation\postgresql-42.4.0.jar;C:\Users\Maran\Desktop\hari\hotelreservation\" HotelReservation // running
