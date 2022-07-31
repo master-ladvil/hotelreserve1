@@ -5,6 +5,7 @@ the repo include all the neccessary files
 4.hotel.dll -> generated dynamic library
 5.postgresql driver file
 6.HotelReservation.h -> header file generated for native jni
+7.hotelreserve.sql -> this has the sql statements to create the proposed and used schema
 
 can be run through java -cp "postgresdriver path;main path" HotelReservation
 
