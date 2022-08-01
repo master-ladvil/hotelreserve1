@@ -39,19 +39,15 @@ JNIEXPORT void JNICALL Java_HotelReservation_consoleApp
       else printf("within 2");
         
     }
-
+   
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    //to get the info in native and passing to java 
+   //didnt implement cause it took longer execution time for parameter parsing between c and java reducing the performance
+//reason for longer computational time:
+//the string is  stored as a string object in java where as char in c
+//thus we need to convert it to utf and then we again have to send it back to java
+//same vice versa the  java string jstring which has 2 byte mem loc has to be converted to char 1 byte in c to be able to use 
     
     /*printf("Enter the fuullname : ");
     char fname[100];
@@ -70,24 +66,5 @@ JNIEXPORT void JNICALL Java_HotelReservation_consoleApp
     return name;
   }
       
-      char fname[100] = "rootu";
-      char mobile[10];
-      int choice;
-      printf("hello.. welcome to the automated hotel reservation system \n you must choose one to continue \n 1. login \n2.register : ");
-      scanf("%d",&choice);
-      switch(choice){
-        case 1: ; break;
-        case 2: registerr(); break;
-        default: printf("2 kulla da funda");
-      }
-      
-      
-      
-      /*scanf("%s",&fname);
-      printf("enter your mobile num")
-      jstrname = env -> NewStringUTF(fname);
-      printf("hi %s.. please wait while the db is checked ")
-      jstrname = env -> NewStringUTF(fname);
-      return jstrname;
-      */
+ 
     
