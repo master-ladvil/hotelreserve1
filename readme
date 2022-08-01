@@ -1,7 +1,7 @@
 the repo include all the neccessary files
 1.Hotelreservation.jav -> main file
 2.Db.java -> to connect to postgresql
-3.consoleApp.c -> native app
+3.consoleApp.cpp -> native app
 4.hotel.dll -> generated dynamic library
 5.postgresql driver file
 6.HotelReservation.h -> header file generated for native jni
