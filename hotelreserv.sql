@@ -30,6 +30,9 @@ create table reservation(
 
 );
 
+ALTER TABLE client
+ADD CONSTRAINT mobunq UNIQUE(mobile);
+
 insert into room (cid, rid, price) values (4, 2, 1513);
 insert into room (cid, rid, price) values (4, 1, 1250);
 insert into room (cid, rid, price) values (2, 1, 1723);
